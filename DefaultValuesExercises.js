@@ -3,11 +3,11 @@
 function addNumbers(num1 = 0, num2 = 0) {
     return num1 + num2;
 }
-console.log(addNumbers(num1,num2));
+console.log(addNumbers());
 
 //Q2
-// function sayHello(name, greeting = "Hello") {
-//     console.log(`${greeting} ${name}`)
-// }
+function sayHello(name, greeting = "Hello") {
+    console.log(`${greeting} ${name}`)
+}
 
-// sayHello("Aileen","Hello");
+sayHello("Aileen",);

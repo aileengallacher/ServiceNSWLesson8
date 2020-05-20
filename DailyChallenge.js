@@ -33,7 +33,7 @@ let pets = [
 //     return pet.ownerName == "Luke";
 // }
 
-const ownedByLuke = pet => (pet.ownerName == "Luke");
+const ownedByLuke = pet => pet.ownerName == "Luke";
 
 //let lukesPets = pets.filter(ownedByLuke);
 // console.log(lukesPets);
@@ -43,7 +43,7 @@ const ownedByLuke = pet => (pet.ownerName == "Luke");
 // function getOwner(pet){       // OG function
 //     return pet.ownerName;
 // }
-const getOwner = pet => (pet.ownerName);
+const getOwner = pet => pet.ownerName;
 
 // let owners = pets.map(getOwner);
 // console.log(owners);
@@ -52,7 +52,7 @@ const getOwner = pet => (pet.ownerName);
 // function findShaggysPet(pet) {                   // OG function
 //     return pet.ownerName == "Shaggy";
 // }
-const findShaggysPet = pet => (pet.ownerName == "Shaggy")
+const findShaggysPet = pet => pet.ownerName == "Shaggy"
 
 // let shaggysPet = pets.find(findShaggysPet);
 // console.log(shaggysPet);
@@ -64,11 +64,17 @@ const findShaggysPet = pet => (pet.ownerName == "Shaggy")
 //     let hasS = pet.name[0] == "S" || pet.ownerName[0] == "S";
 //     return lessThan5 && hasS;
 // }
-const filterCallback = pet => {
-    let lessThan5 = pet.age < 5;
-    let hasS = pet.name[0] == "S" || pet.ownerName[0] == "S";
-    return lessThan5 && hasS;
-}
+// const filterCallback = pet => {
+//     let lessThan5 = pet.age < 5;
+//     let hasS = pet.name[0] == "S" || pet.ownerName[0] == "S";
+//     return lessThan5 && hasS;
+// }
+
+// let filteredPets = pets.filter(filterCallback);
+// console.log(filteredPets);
+
+// one line reduce
+const filterCallback = pet => pet.age < 5 && (hasS = pet.name[0] == "S" || pet.ownerName[0] == "S")
 
 let filteredPets = pets.filter(filterCallback);
 console.log(filteredPets);
